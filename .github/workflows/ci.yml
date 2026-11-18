@@ -4,9 +4,9 @@ name: build-and-lint
 # trigger on push to these branches
 on:
   push:
-    branches: [main, dev]
+    branches: [master, main, dev]
   pull_request:
-    branches: [main, dev]
+    branches: [master, main, dev]
 
     # define a job (multiple jobs also)
 jobs:
@@ -77,7 +77,7 @@ jobs:
             cd "${EC2_APP_DIR}"
 
             git fetch --all
-            git reset --hard origin/main
+            git reset --hard origin/master
 
             docker compose up -d --build
 

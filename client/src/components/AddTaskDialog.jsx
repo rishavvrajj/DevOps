@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 
 const AddTaskDialog = ({ onClose, onSubmit }) => {
@@ -44,8 +42,7 @@ const AddTaskDialog = ({ onClose, onSubmit }) => {
         setError(result.error || 'Failed to create task');
       }
     } catch (err) {
-      console.log(err);
-
+      console.error('Error in form submission:', err);
       setError('An unexpected error occurred');
     } finally {
       setIsSubmitting(false);

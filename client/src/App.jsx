@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 import TaskList from './components/TaskList';
 import AddTaskDialog from './components/AddTaskDialog';
@@ -60,8 +58,6 @@ function App() {
     fetchTasks();
   };
 
-  // let sangam = 'unused variable here';
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -69,7 +65,7 @@ function App() {
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Task Manager Edited</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Task Manager</h1>
               <p className="text-gray-600 mt-1">Simple task management for DevOps demo</p>
             </div>
             <button
